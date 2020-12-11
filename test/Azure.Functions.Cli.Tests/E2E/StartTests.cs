@@ -470,7 +470,8 @@ namespace Azure.Functions.Cli.Tests.E2E
             }, _output);
         }
 
-        [Fact]
+        // https://github.com/Azure/azure-functions-core-tools/issues/2320
+        [SkippableFact]
         public async Task start_powershell()
         {
             await CliTester.Run(new RunConfiguration
